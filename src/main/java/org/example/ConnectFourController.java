@@ -1,6 +1,6 @@
 package org.example;
 
-import static org.example.ConnectFourModel.dropPiece;
+//import static org.example.ConnectFourModel.dropPiece;
 
 public class ConnectFourController {
 
@@ -46,7 +46,7 @@ public class ConnectFourController {
     }
 
     private boolean checkDiagonally() {
-        // Check diagonally (from top-left to bottom-right)
+        // Check diagonally (from top-left to bottom-right: \)
         for (int row = 0; row < 3; row++) {
             for (int col = 0; col < 4; col++) {
                 if (model.getBoard()[row][col] != ' ' &&
@@ -58,7 +58,7 @@ public class ConnectFourController {
             }
         }
 
-        // Check diagonally (from top-right to bottom-left)
+        // Check diagonally (from top-right to bottom-left: /)
         for (int row = 0; row < 3; row++) {
             for (int col = 3; col < 7; col++) {
                 if (model.getBoard()[row][col] != ' ' &&
@@ -94,7 +94,7 @@ public class ConnectFourController {
             int column = (model.getCurrentPlayer() == 'X') ? human.play() : computer.play();
 
 
-            if (!dropPiece(column)) {
+            if (!model.dropPiece(column)) {
                 System.out.println("Column is full. Try again.");
                 continue;
             }

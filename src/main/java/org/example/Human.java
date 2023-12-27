@@ -1,9 +1,10 @@
 package org.example;
 
 import java.util.Scanner;
-import static org.example.ConnectFourModel.isColumnValid;
+//import static org.example.ConnectFourModel.isColumnValid;
 
 public class Human extends Player{
+    private ConnectFourModel model;
     private Scanner scanner;
     Human(char symbol) {
         super(symbol);
@@ -13,6 +14,7 @@ public class Human extends Player{
 
     @Override
     public int play() {
+        model = new ConnectFourModel();
         int column;
         do {
             System.out.print("Player " + symbol + ", enter a column (1-7): ");
@@ -23,7 +25,7 @@ public class Human extends Player{
             column = scanner.nextInt();
 
 
-        } while (!isColumnValid(column - 1));
+        } while (!model.isColumnValid(column - 1));
 
         return column-1;
     }
