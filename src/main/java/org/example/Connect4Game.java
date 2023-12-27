@@ -16,6 +16,8 @@ public class Connect4Game {
         ConnectFourController controller = new ConnectFourController();
         controller.playGame();
 
+        // this is a test commit
+
 //        Computer computer = new Computer("Bot");
 //        Human human = new Human("Yassin");
 //        initializeBoard();
