@@ -15,9 +15,6 @@ public class ConnectFourController {
         computer = new Computer('O');
     }
 
-    public boolean isGameOver() {
-        return checkForWin() || isBoardFull();
-    }
     // Check horizontally
     private boolean checkHorizontally() {
         for (int row = 0; row < 6; row++) {
@@ -134,7 +131,4 @@ public class ConnectFourController {
         System.out.println("  1   2   3   4   5   6   7");
     }
 
-//    private static void switchPlayer() {
-//        currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
-//    }
 }
