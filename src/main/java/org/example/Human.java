@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.Scanner;
-//import static org.example.ConnectFourModel.isColumnValid;
 
 public class Human extends Player{
     private ConnectFourModel model;

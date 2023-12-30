@@ -1,7 +1,5 @@
 package org.example;
 
-//import static org.example.ConnectFourModel.dropPiece;
-
 public class ConnectFourController {
 
     private ConnectFourModel model;
